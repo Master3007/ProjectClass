@@ -18,13 +18,13 @@ public static void main(String[] args) {
 	JavascriptExecutor js= (JavascriptExecutor) driver;
 	
 	WebElement Txtuser = driver.findElement(By.id("email"));
-	js.executeScript("arguments[0].setAtrribute('Value', 'Mathi')", Txtuser);
+	js.executeScript("arguments[0].setAttribute('value','mathi')",Txtuser);
 
-	Object executeScript = js.executeScript("return aruguments[0].getAttribute('value')", Txtuser);
+	Object executeScript = js.executeScript("return arguments[0].getAttribute('value')", Txtuser);
 	System.out.println(executeScript);
 
 	WebElement textPass = driver.findElement(By.id("pass"));
-	js.executeScript("arguments[0].setAttribute('value','1587')", textPass);
+	js.executeScript("arguments[0].setAttribute('value','1234567')", textPass);
 
 
 }
